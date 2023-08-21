@@ -1,11 +1,15 @@
 <script setup>
-defineProps(["Cardtest"])
+defineProps(["images", "Cardtext"])
 </script>
 
 <template>
     <div class="cards">
-        <img src="../assets/image 96twitter.png" alt="">
-        <p>{{ Cardtest }}</p>
+        <img :src= "images">
+        <p>{{ Cardtext }}</p>
+        <div class="close-icon">
+            <img src="../assets/close-icon.png"/>
+
+        </div>
 
     </div>
 
@@ -15,12 +19,12 @@ defineProps(["Cardtest"])
 .cards{
 width: 293.038px;
 height: 70.42px;
-transform: rotate(-4deg);
 background: #181818;
 display: flex;
 gap: 8px ;
 align-items: center;
 padding: 20px 30px;
+display: flex;
 }
 
 .cards p{

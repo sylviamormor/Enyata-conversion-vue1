@@ -1,55 +1,56 @@
 <script setup>
 import ButtonComponent from './ButtonComponent.vue';
 import CardComponent from './CardComponent.vue';
+import twitter from '../assets/twitter.png'
+import pintrest from '../assets/pintrest.png'
+import facebook from '../assets/facebook.png'
+import pink from '../assets/pink.png'
 </script>
 
 <template>
   <div class="header">
-  <nav class="navBar">
-    <div class="logo">
-      <img src="../assets/Vectorfindlogo.png" alt="">
-      <p>Findtrend</p>
-    </div>
-    <div class="navList">
+    <nav class="navBar">
+      <div class="logo">
+        <img src="../assets/Vectorfindlogo.png" alt="">
+        <p>Findtrend</p>
+      </div>
+      <div class="navList">
         <a href="">About</a>
         <a href="">How it works</a>
         <a href="">Pricing</a>
         <a href="">Solution</a>
         <a href="">Features</a>
+      </div>
+      <div class="navBtns">
+        <a href="" class="login">Login</a>
+        <ButtonComponent buttontext="Register" />
+      </div>
+      <div class="menu">
+        <img src="../assets/iconmenu.png" alt="">
+      </div>
+    </nav>
+  </div>
+  <div class="headerText">
+    <h1>Minimize your tabs. <br> Find the trends! </h1>
+    <p>Don’t let your computer memories consumes all of those browser tabs.
+      Findtrend let you gathers all of your favorite website into one place.</p>
+    <div>
+      <ButtonComponent class="greenBtn" buttontext="Get Started 🔥" />
     </div>
-    <div class="navBtns">
-      <a href="" class="login">Login</a>
-      <ButtonComponent buttontext="Register"/>
+    <div class="allCards">
+      <CardComponent class="card1" :images="twitter" Cardtext="Cryptopunk - Search" />
+      <CardComponent class="card2" :images="pintrest" Cardtext="Popular Design - Search" />
+      <CardComponent class="card3" :images="facebook" Cardtext="Product Design - Search" />
+      <CardComponent class="card4" :images="pink" Cardtext="Elon Musk - Search" />
     </div>
-    <div class="menu">
-      <img src="../assets/iconmenu.png" alt="">
-    </div>
-  </nav>
-</div>
-<div class="headerText">
-  <h1>Minimize your tabs. <br> Find the trends!   </h1>
-  <p>Don’t let your computer memories consumes all of those browser tabs. 
-Findtrend  let you gathers all of your favorite website into one place.</p>
-<div>
-<ButtonComponent class="greenBtn" buttontext="Get Started 🔥"/>
-</div>
-<div>
-  <CardComponent class="card1" Cardtest="Cryptopunk - Search"/>
-  <CardComponent class="card2" Cardtest="Popular Design - Search"/>
-  <CardComponent class="card3" Cardtest="Product Design - Search"/>
-  <CardComponent class="card4" Cardtest="Elon Musk - Search"/>
-    </div>
-</div>
-
+  </div>
 </template>
 
 
 
 
 <style scoped>
-
-
-.navBar{
+.navBar {
   display: flex;
   justify-content: space-between;
   background-color: black;
@@ -57,10 +58,11 @@ Findtrend  let you gathers all of your favorite website into one place.</p>
   padding: 30px 18px;
 }
 
-.navBar p{
+.navBar p {
   display: none;
 }
-.logo{
+
+.logo {
   display: flex;
   width: 100px;
   height: 40px;
@@ -69,31 +71,32 @@ Findtrend  let you gathers all of your favorite website into one place.</p>
 }
 
 
-.navList{
+.navList {
   display: none
 }
 
-.navBtns{
-  display: none; 
-}
-
-.login{
+.navBtns {
   display: none;
 }
 
-.greenBtn{
-color: #000;
-text-align: center;
-font-family: Effra;
-font-size: 14px;
-font-style: normal;
-font-weight: 700;
-line-height: 140%; /* 19.6px */
-border-radius: 40px;
-background: #A8FF35;
+.login {
+  display: none;
 }
 
-.headerText{
+.greenBtn {
+  color: #000;
+  text-align: center;
+  font-family: Effra;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  border-radius: 40px;
+  background: #A8FF35;
+}
+
+
+.headerText {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -101,51 +104,43 @@ background: #A8FF35;
   align-items: center;
 }
 
-.headerText h1{
+.headerText h1 {
   color: #FFF;
-text-align: center;
-font-family: Effra;
-font-size: 36px;
-font-style: normal;
-font-weight: 900;
-line-height: 112%; /* 40.32px */
+  text-align: center;
+  font-family: Effra;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 112%;
 }
 
-.headerText p{
+.headerText p {
   color: #8B8B8B;
-text-align: center;
-font-family: Effra;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 21px */
-max-width: 286px; 
-margin: auto;
+  text-align: center;
+  font-family: Effra;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  max-width: 286px;
+  margin: auto;
 }
 
-.cards{
-width: 293.038px;
-height: 70.42px;
-transform: rotate(-4deg);
-background: #181818;
-display: flex;
-gap: 8px ;
-align-items: center;
-padding: 20px 30px;
+
+.card1{
+  transform: rotate(-4deg);
 }
 
-.card1 p{
-  max-width: 70px;
-
+.card2 {
+  transform: rotate(2deg);
 }
-.cards p{
-color: #FFF;
-text-align: center;
-font-family: Roboto;
-font-size: 20.445px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+
+.card3 {
+  transform: rotate(-2deg);
+}
+
+.card4 {
+  transform: rotate(4deg);
 }
 
 
@@ -156,40 +151,86 @@ line-height: normal;
 
 
 
-@media (min-width: 750px){
 
-.navList{
-  display: flex;
-  gap: 20px;
+@media (min-width: 900px) {
+
+  .navList {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navList a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    align-items: center;
+  }
+
+  .navBar p {
+    display: block;
+    color: white;
+  }
+
+  .login {
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+
+  .navBtns {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .menu {
+    display: none;
+  }
+
+
+  .allCards {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 20px;
+   
+  }
+
+  .card2 {
+   
+    position: relative;
+  }
+
+  .card1 {
+    position:absolute ;
+    top: 80%;
+    right: 80%;
+    
+  }
+
+  .card3 {
+    position: relative;
+  }
+
+  .card4{
+    position: absolute;
+    right: 0%;
+    top: 40%;
+    z-index: 2;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-.navList a{
-  text-decoration: none;
-  list-style: none;
-  color: white;
-  align-items: center;
-}
-
-.navBar p{
-  display: block;
-  color: white;
-}
-.login{
-  display: block;
-  text-decoration: none;
-  color: white;
-}
-
-.navBtns{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.menu{
-  display: none;
-}
-
-} 
-
 </style>
