@@ -19,4 +19,9 @@ background: #F5F5F5;
 padding: 14px;
 
 }
+
+
+@media (min-width: 750px){
+
+}
 </style>

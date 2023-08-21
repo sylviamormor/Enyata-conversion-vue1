@@ -5,9 +5,9 @@ import ButtonComponent from './ButtonComponent.vue';
 
 <template>
 <div class="mobilePix">
-    <img src="../assets/tweetmobile1.png" alt="">
-    <img src="../assets/tweetmobile2.png" alt="">
-    <img src="../assets/tweetmobile3.png" alt="">
+    <img src="../assets/tweetweb1.png" alt="">
+    <img src="../assets/tweetweb2.png" alt="">
+    <img src="../assets/tweetweb3.png" alt="">
     
     <ButtonComponent class="newbtn"  buttontext="View more trend" />
 
@@ -21,7 +21,6 @@ import ButtonComponent from './ButtonComponent.vue';
 
 <style scoped>
 .mobilePix{
-max-width: 800px;
 padding: 32px 18px ;
 display: flex;
 flex-direction: column;
@@ -29,6 +28,9 @@ align-items: center;
 justify-content: center;
 
 
+}
+.mobilePix img{
+    max-width: 339px;
 }
 
 .newbtn{ 
@@ -49,12 +51,20 @@ margin-top: 20px ;
 }
 
 
-@media (min-width: 900px) {
+@media (min-width: 765px) {
    
 .mobilePix{
     display: flex;
     flex-direction: column;
     gap: 40px;
+   align-items: center;
+   justify-content: center;
+
+
+}
+
+.mobilePix img{
+    max-width: 700px;
 }
 
 .btnblack{

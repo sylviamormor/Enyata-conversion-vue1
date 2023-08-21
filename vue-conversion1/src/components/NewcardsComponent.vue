@@ -45,9 +45,10 @@ import heineken  from '../assets/heineken.png'
  display: grid;
  grid-template-columns: repeat(2, 1fr);
  grid-gap: 10px;
+ 
 }
 
-@media (min-width: 900px) {
+@media (min-width: 750px) {
 .cds{
  display:grid ;
  grid-template-columns: repeat(4, 1fr);

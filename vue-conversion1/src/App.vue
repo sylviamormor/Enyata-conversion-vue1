@@ -5,9 +5,10 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import NewcardsComponent from './components/NewcardsComponent.vue';
 import PicturetextComponent from './components/PicturetextComponent.vue';
 import TrendingComponentVue from './components/TrendingComponent.vue';
-import GreencardComponent from './components/GreencardComponent.vue';
+import GreenwhiteComponent from './components/GreenwhiteComponent.vue';
 import SignupComponent from './components/SignupComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import DealComponent from './components/DealComponent.vue';
 </script>
 
 <template>
@@ -32,16 +33,11 @@ fulfill your daily browsing needs. </span></p>
 <div>
 <TrendingComponentVue/>
 </div>
-<div>
-  <PicturetextComponent/>
- 
-</div>
+ <PicturetextComponent/>
 <div>
   <ButtonComponent/>
 </div>
-<div>
-  <GreencardComponent/>
-</div>
+<DealComponent/>
 <div>
   <SignupComponent/>
 </div>
@@ -50,7 +46,7 @@ fulfill your daily browsing needs. </span></p>
 </div>
 
 
-  <!-- <ButtonGroup @the-yes="handleyes" @the-no="handleno"/> -->
+  
 </template>
 
 <style scoped>
@@ -107,7 +103,7 @@ font-style: normal;
 font-weight: 900;
 line-height: normal;
 padding-top: 160px;
-max-width: 339px;
+/* max-width: 339px; */
 }
 
 
@@ -116,7 +112,7 @@ max-width: 339px;
 
 
 
-@media (min-width: 900px) {
+@media (min-width: 750px) {
   .NComponent p{ 
   max-width: 1160px;
   }
@@ -124,6 +120,13 @@ max-width: 339px;
     max-width: 1160px;
     padding:14px 10px ;
 
+  }
+  .gComponent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 140px;
+    background-color: #000;
   }
 
   

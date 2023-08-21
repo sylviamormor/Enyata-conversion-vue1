@@ -19,7 +19,7 @@ import ButtonComponent from './ButtonComponent.vue';
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* gap: 10px; */
+    
 }
     .signupText{
         color: #000;

@@ -67,12 +67,12 @@ line-height: 150%
 }
 
 
-.arrow1 {
+.arrow1  {
    position: absolute;
-   right: 0;  
+   right: 0%;  
 }
 
-.arrow2{
+.arrow2 img{
     position: absolute;
     left: 0%;
 }
@@ -83,7 +83,7 @@ line-height: 150%
 
 
 
-@media (min-width: 900px) {
+@media (min-width: 750px) {
 .arrow1 {
    position: absolute;
   
@@ -94,7 +94,7 @@ line-height: 150%
     left: 0%;
 }
 .case1{
-  
+    max-width: 502px;
 }
 }
 </style>

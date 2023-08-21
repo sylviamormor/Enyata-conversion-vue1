@@ -1,10 +1,15 @@
 <script setup>
 import ButtonComponent from './ButtonComponent.vue';
 import GreentextComponent from './GreentextComponent.vue';
+import GreenwhiteComponent from './GreenwhiteComponent.vue';
     
 </script>
 
 <template>
+  <div>
+    <GreenwhiteComponent/>
+  
+       
     <div class="dcontainer deal1">
         <h1 class="info">Personal</h1>
         <p class="page">Special first packet for all</p>
@@ -42,6 +47,7 @@ import GreentextComponent from './GreentextComponent.vue';
         <GreentextComponent deallist="5 Days group page saved"/>
         <ButtonComponent  buttontext="Start Free Trial" class="blackbutton"/>
     </div>
+</div>
 </template>
 
 <style scoped>

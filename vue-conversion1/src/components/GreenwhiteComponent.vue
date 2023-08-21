@@ -4,17 +4,13 @@ import GreencardComponent from './GreencardComponent.vue';
 </script>
 
 <template>
-    <div class="container">
+    <div class="mainContainer">
         <h1 class="header">Get your best deal</h1>
         <div class="body">
             <h3 class="month">Monthly</h3>
-            <label class="choose">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
+            <img src="../assets/slider.png" alt=" ">
             <div class="year">
                 <h3 class="period">Yearly</h3>
-                <img src="../assets/toogler.png" alt=" ">
             </div>
         </div>
         <div class="deals">
@@ -31,7 +27,7 @@ import GreencardComponent from './GreencardComponent.vue';
         gap: 20px;
 
     }
-    .container{
+    .mainContainer{
         background-color: #000;
         padding: 10%;
         display: flex;
@@ -53,63 +49,8 @@ import GreencardComponent from './GreencardComponent.vue';
         justify-content: center;
         gap: 10px;
     }
-.choose {
-  position: relative;
-  display: inline-block;
-  width: 80px;
-  height: 34px;
-}
-.choose input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: rgba(168, 255, 53, 1);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #FFF;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #FFF;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(45px);
-  -ms-transform: translateX(45px);
-  transform: translateX(45px);
-}
 
 
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
 .month{
     color: #FFF;
     font-family: 'Ubuntu';
@@ -136,16 +77,16 @@ input:checked + .slider:before {
 
 @media (min-width: 900px){
     .year{
-    position: static;
+    /* position: static; */
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.year img{
+/* .year img{
     position: static;
-}
+} */
 .header{
-    color: #FFF;
+    color: black;
     text-align: center;
     font-family: 'Ubuntu';
     font-size: 64px;

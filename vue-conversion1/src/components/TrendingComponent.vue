@@ -12,58 +12,46 @@ import linkedin from '../assets/linkedin.png'
 </script>
 
 <template>
+  
     <div class="firstSet">
 <TrendcardsComponent class="tc1" :trend="facebk" />
       <TrendcardsComponent  class="tc2" :trend="twit"/>
       <TrendcardsComponent  class="tc3" :trend="pink"  />
       <TrendcardsComponent  class="tc4" :trend="pintrest"  />
       <TrendcardsComponent  class="tc5" :trend="halfblack"  />
-    </div>
-    <div class="secondSet">
-        <TrendcardsComponent class="tc1" :trend="facebk" />
-      <TrendcardsComponent  class="tc2" :trend="twit"/>
-      <TrendcardsComponent  class="tc3" :trend="pink"  />
-      <TrendcardsComponent  class="tc4" :trend="pintrest"  />
     <TrendcardsComponent class="tc6" :trend="black" />
-        <TrendcardsComponent class="tc7" :trend="orange" />
-      <TrendcardsComponent  class="tc8" :trend="vk"/>
-      <TrendcardsComponent  class="tc9" :trend="linkedin"  />
+        <TrendcardsComponent class="tc6" :trend="orange" />
+      <TrendcardsComponent  class="tc6" :trend="vk"/>
+      <TrendcardsComponent  class="tc6" :trend="linkedin"  />
     </div>
 </template>
 
 <style scoped>
-.secondSet{
-display: none;
-}
+
 .firstSet{
 padding-left: 18px;
 display: flex;
 gap: 18px;
 padding-right: 0px;
 align-items: center;
+justify-content: center;
 }
 
 .tc2{
 
 background: #A8FF35;
 }
-
-@media (min-width: 900px) {
-.firstSet{
-    display: none;
+.tc6{
+  display: none;
 }
-.secondSet{
-    display: block;
-    width: 124px;
-height: 124px;
-border-radius: 8px;
-padding-left: 18px;
-display: flex;
-padding-right: 0px;
-align-items: center;
-gap: 24px;
-justify-content: start;
-padding: 140px ;
+
+@media (min-width: 785px) {
+
+.tc6{
+  display: block;
+}
+.tc5{
+  display: none;
 }
 }
 
